@@ -16,11 +16,17 @@ struct convert
 char *sym;
 int (*f)(va_list);
 };
+<<<<<<< HEAD
 
 typedef struct convert conver_t;
 
 /*Main functions*/
 
+=======
+typedef struct convert conver_t;
+
+/*Main functions*/
+>>>>>>> 102d107b958fd2463349c385eba8e7478aae7cf0
 int parser(const char *format, conver_t f_list[], va_list arg_list);
 int _printf(const char *format, ...);
 int _write_char(char);
@@ -32,13 +38,20 @@ int print_number(va_list);
 int print_binary(va_list);
 int print_reversed(va_list arg);
 int rot13(va_list);
+<<<<<<< HEAD
 int unsigned_integer(va_list);
+=======
+int unsigned_integer(va_list)
+>>>>>>> 102d107b958fd2463349c385eba8e7478aae7cf0
 int print_octal(va_list list);
 int print_hex(va_list list);
 int print_heX(va_list list);
 
 /*Helper functions*/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 102d107b958fd2463349c385eba8e7478aae7cf0
 unsigned int base_len(unsigned int, int);
 char *rev_string(char *);
 void write_base(char *str);
