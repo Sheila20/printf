@@ -1,45 +1,28 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-#include <unistd.h>
-#include <stdlib.h>
+#ifndef _MAIN_H
+#define _MAIN_H
 #include <stdarg.h>
 
 /**
- * struct convert - defines a structure for symbols and functions
- * @sym: The operator
- * @f: The function associated
+ * struct specifiers - Struct specifiers
+ * @specifier: The conversion specifier
+ * @f: The function pointer
  */
 
-struct convert
+typedef struct specifiers
 {
-char *sym;
-int (*f)(va_list);
-};
-typedef struct convert conver_t;
-
-/*Main functions*/
-int parser(const char *format, conver_t f_list[], va_list arg_list);
+char *specifier;
+int (*f)(va_list args);
+} spc_dt;
+int _write(char c);
 int _printf(const char *format, ...);
-int _write_char(char);
-int print_char(va_list);
-int print_string(va_list);
-int print_percent(va_list);
-int print_integer(va_list);
-int print_number(va_list);
-int print_binary(va_list);
-int print_reversed(va_list arg);
-int rot13(va_list);
-int unsigned_integer(va_list)
-int print_octal(va_list list);
-int print_hex(va_list list);
-int print_heX(va_list list);
-
-/*Helper functions*/
-unsigned int base_len(unsigned int, int);
-char *rev_string(char *);
-void write_base(char *str);
-char *_memcpy(char *dest, char *src, unsigned int n);
-int print_unsgined_number(unsigned int);
-
+int _print_a_char(va_list args);
+int _print_a_string(va_list args);
+int _print_format(const char *format, va_list args);
+int _print_spec(char format, va_list args);
+int _print_invalid_spec(char prev_format, char format, int count);
+int _print_a_integer(va_list args);
+void _recursion_integer(int a);
+int _print_int_binary(va_list args);
+void _recursion_int_binary(int a);
+int _validate_char(char _type);
 #endif
