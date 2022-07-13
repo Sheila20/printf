@@ -6,7 +6,8 @@
  *
  * return: Always Successful (0)
  */
-int print_number(int n)int print_number(int n)
+int print_number(int n)
+
 {
 	if (n < 0)
 	{
@@ -28,6 +29,7 @@ int print_number(int n)int print_number(int n)
  */
 
 int print_string(char *c)
+
 {
 	int len = strlen(c);
 	int i = 0;
