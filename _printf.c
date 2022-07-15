@@ -1,7 +1,9 @@
 #include "main.h"
+#include <stdarg.h>
+#include <stdio.h>
 
 /**
- * _printf - pritns out a formatted string
+ * _printf - prints out a formatted string
  * @format: the string to be formatted
  * Return: the length of the string
  */
